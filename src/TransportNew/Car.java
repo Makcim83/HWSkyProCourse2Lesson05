@@ -13,13 +13,17 @@ public class Car extends Transport {
         setBodyType(body);
     }
 
+    public void printType() {
+        System.out.println("Type of Car body is " + (this.body != null ? this.body.toString() : " unknown"));
+    }
+
     public BodyType getBodyType() {
         return body;
     }
 
-    public void setBodyType(BodyType body) {
+    private void setBodyType(BodyType body) {
         if (body == null) {
-            System.err.println("BodyType no changed");
+            System.out.println("Body type of car no changed");
             this.body = BodyType.Sedan;
         } else {
             this.body = body;

@@ -1,9 +1,10 @@
 package TransportNew;
 
-public class Transport {
+public abstract class Transport<T> {
     private final String brand;
     private final String model;
     private final Float engineValue;
+
 
     public Transport(String brand,
                      String model,
@@ -12,6 +13,8 @@ public class Transport {
         this.model = validateString(model, "Default");
         this.engineValue = validateFloat(engineValue);
     }
+
+    public abstract void printType();
 
     public String getBrand() {
         return brand;
@@ -36,13 +39,10 @@ public class Transport {
         return validateString == null || validateString.isEmpty() || validateString.isBlank() ? defaultValue : validateString;
     }
 
-    public int validateInt(Integer validateInt) {
-        return validateInt != null && validateInt > 0 ? validateInt : 0;
-        //неправильная реализация ниже, что не проходила проверку на null
-        //return validateInt == null || validateInt < 0 ? 0 : validateInt;
-    }
-
     public float validateFloat(Float validateFloat) {
         return validateFloat != null && validateFloat > 0 ? validateFloat : 0;
+
+        //неправильная реализация, что не проходила проверку на null (нельзя сравнивать примитив с объектом null)
+        //return validateFloat == null || validateFloat < 0 ? 0 : validateInt;
     }
 }

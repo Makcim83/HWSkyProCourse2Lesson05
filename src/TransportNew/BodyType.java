@@ -9,5 +9,7 @@ public enum BodyType {
     Crossover,
     PickupTruck,
     Van,
-    Minivan
+    Minivan;
+
+
 }
