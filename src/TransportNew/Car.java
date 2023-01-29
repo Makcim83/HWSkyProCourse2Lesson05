@@ -1,30 +1,28 @@
 package TransportNew;
 
-import java.nio.Buffer;
-
 public class Car extends Transport {
-    private BodyType bodyType;
+    private BodyType body;
 
     public Car(String brand,
                String model,
-               float engineValue,
+               Float engineValue,
                BodyType body) {
         super(brand,
                 model,
                 engineValue);
-        setBodyType(bodyType);
+        setBodyType(body);
     }
 
     public BodyType getBodyType() {
-        return bodyType;
+        return body;
     }
 
     public void setBodyType(BodyType body) {
-        if (bodyType == null) {
+        if (body == null) {
             System.err.println("BodyType no changed");
-            this.bodyType = BodyType.Sedan;
+            this.body = BodyType.Sedan;
         } else {
-            this.bodyType = body;
+            this.body = body;
         }
     }
 

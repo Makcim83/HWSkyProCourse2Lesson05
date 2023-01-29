@@ -3,7 +3,7 @@ package TransportNew;
 public class Transport {
     private final String brand;
     private final String model;
-    private final float engineValue;
+    private final Float engineValue;
 
     public Transport(String brand,
                      String model,
