@@ -39,6 +39,11 @@ public class Truck extends Transport {
     }
 
     @Override
+    public void diagnosticsCheck() {
+        System.out.println(getBrand() + " diagnostic is done");
+    }
+
+    @Override
     public String toString() {
         return super.toString() +
                 ", type " + getCapacityTruck();
