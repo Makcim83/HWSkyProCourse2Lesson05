@@ -1,6 +1,6 @@
 package TransportNew;
 
-public class Bus extends Transport {
+public class Bus extends Transport  {
     private SizeBus sizeBus;
 
     public Bus(String brand,
@@ -35,6 +35,11 @@ public class Bus extends Transport {
         } else {
             System.out.println(" unknown");
         }
+    }
+
+    @Override
+    public void diagnosticsCheck() throws TransportTypeException {
+        throw new TransportTypeException("Busses no checks diagnostic");
     }
 
     @Override

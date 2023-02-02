@@ -1,6 +1,6 @@
 package TransportNew;
 
-public abstract class Transport<T> {
+public abstract class Transport {
     private final String brand;
     private final String model;
     private final Float engineValue;
@@ -13,8 +13,9 @@ public abstract class Transport<T> {
         this.model = validateString(model, "Default");
         this.engineValue = validateFloat(engineValue);
     }
-
     public abstract void printType();
+
+    public abstract void diagnosticsCheck() throws TransportTypeException;
 
     public String getBrand() {
         return brand;

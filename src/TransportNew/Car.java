@@ -30,6 +30,10 @@ public class Car extends Transport {
         }
     }
 
+    @Override
+    public void diagnosticsCheck() {
+        System.out.println(getBrand() + " diagnostic is done");
+    }
 
     @Override
     public String toString() {
